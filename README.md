@@ -65,16 +65,17 @@ This project aims to create full CI/CD Pipeline for microservice based applicati
 ``` bash
 #! /bin/bash
 yum update -y
-sudo amazon-linux-extras install docker -y
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo usermod -a -G docker ec2-user
-sudo newgrp docker
-sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" \
+hostnamectl set-hostname petclinic-dev-server
+amazon-linux-extras install docker -y
+systemctl start docker
+systemctl enable docker
+usermod -a -G docker ec2-user
+newgrp docker
+curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" \
 -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-sudo yum install git -y
-sudo yum install java-11-amazon-corretto -y
+chmod +x /usr/local/bin/docker-compose
+yum install git -y
+yum install java-11-amazon-corretto -y
 ```
 
 ## MSP 2 - Prepare GitHub Repository for the Project
