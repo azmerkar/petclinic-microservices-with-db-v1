@@ -2920,7 +2920,7 @@ rke --version
 
 ```yaml
 nodes:
-  - address: 44.202.199.45
+  - address: 172.31.82.64
     internal_address: 172.31.82.64
     user: ubuntu
     role:
