@@ -1,0 +1,30 @@
+nodes:
+<<<<<<< HEAD
+  - address: 34.201.205.128
+    internal_address: 172.31.6.92
+=======
+  - address: 44.202.199.45
+    internal_address: 172.31.5.166
+>>>>>>> feature/msp-24
+    user: ubuntu
+    role:
+      - controlplane
+      - etcd
+      - worker
+
+# ignore_docker_version: true
+
+services:
+  etcd:
+    snapshot: true
+    creation: 6h
+    retention: 24h
+
+ssh_key_path: ~/.ssh/call-rancher.pem
+
+# Required for external TLS termination with
+# ingress-nginx v0.22+
+ingress:
+  provider: nginx
+  options:
+    use-forwarded-headers: "true"
