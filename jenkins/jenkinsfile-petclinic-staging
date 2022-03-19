@@ -11,7 +11,7 @@ pipeline {
         // Get the project-id from Rancher UI (petclinic-cluster-staging namespace, View in API, copy projectId )
         RANCHER_CONTEXT="c-gkrrt:p-v656x" 
        //First part of projectID
-        CLUSTERID="petclinic-cluster"
+        CLUSTERID="c-gkrrt"
         RANCHER_CREDS=credentials('rancher-petclinic-credentials')
     }
     stages {
