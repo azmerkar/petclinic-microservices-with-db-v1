@@ -3834,7 +3834,7 @@ git checkout feature/msp-28
 * Log into Jenkins Server and configure the `kubectl` to connect to petclinic cluster by getting the `Kubeconfig` file from Rancher and save it as `$HOME/.kube/config` or set `KUBECONFIG` environment variable.
 
 ```bash
-#create petclinic-config file under home folder(/home/ec2-user).
+#create petclinic-config file under home folder(/home/ec2-user/.kube).
 nano petclinic-config
 # paste the content of kubeconfig file and save it.
 chmod 400 petclinic-config
